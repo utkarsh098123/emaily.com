@@ -3,9 +3,14 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send({ message: 'this is my first website' });
+    res.send({ message: 'my first website' });
 });
 
-app.listen(5000, () => {
-    console.log('Server is running on port 5000');
-});
+
+const Host = '0.0.0.0';
+
+const PORT = process.env.PORT || 10000 ;
+
+app.listen(PORT,Host , () => {
+  console.log('server is running')
+})
